@@ -9,9 +9,8 @@ const generateAbout = aboutText => {
             <h2 class="text-dark bg-primary p-2 display-inline-block">About Me</h2>
             <p>${aboutText}</p>
         </section>
-        
     `;
-}
+};
 
 const generateProjects = projectsArr => {
   return `
@@ -56,8 +55,7 @@ const generateProjects = projectsArr => {
   `;
 };
 
-module.exports = (name, github) => {
-    console.log(templateData);
+module.exports = templateData => {
     // destructure projects and about data from templateData based on their property key names
     const { projects, about, ...header } = templateData;
     return `
